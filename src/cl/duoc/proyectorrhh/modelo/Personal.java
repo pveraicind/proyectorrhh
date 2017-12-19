@@ -12,7 +12,15 @@ package cl.duoc.proyectorrhh.modelo;
 public class Personal {
     
     private Integer id, rut;
-    private String fechaIngreso,direccion,fechaNacimiento,nombre;
+    private String fechaIngreso,direccion,fechaNacimiento,nombre,dv;
+
+    public String getDv() {
+        return dv;
+    }
+
+    public void setDv(String dv) {
+        this.dv = dv;
+    }
 
     //Constructores
     public Personal() {
