@@ -9,6 +9,6 @@ package cl.duoc.proyectorrhh.servicio;
  *
  * @author USUARIO
  */
-public class NewClass {
+public class Agregar {
     
 }
