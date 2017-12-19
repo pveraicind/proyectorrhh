@@ -22,7 +22,7 @@ public class Agregar {
             public Boolean agregarcliente( Personal personal){
                 
                 try {
-                    bolita = new Boolean(true);
+                    bolita = true;
                     System.out.println("Insertar registro...");
                     Statement dec;
                     dec=Conexion.obtenerInstancia().createStatement();
