@@ -12,15 +12,16 @@ package cl.duoc.proyectorrhh.modelo;
 public class Personal {
     
     private Integer id, rut;
-    private String fechaIngreso,direccion,fechaNacimiento,nombre;
+    private String dv,fechaIngreso,direccion,fechaNacimiento,nombre;
 
     //Constructores
     public Personal() {
     }
 
-    public Personal(Integer id, Integer rut, String fechaIngreso, String direccion, String fechaNacimiento, String nombre) {
+    public Personal(Integer id, Integer rut, String dv, String fechaIngreso, String direccion, String fechaNacimiento, String nombre) {
         this.id = id;
         this.rut = rut;
+        this.dv = dv;
         this.fechaIngreso = fechaIngreso;
         this.direccion = direccion;
         this.fechaNacimiento = fechaNacimiento;
@@ -28,11 +29,16 @@ public class Personal {
     }
 
     
+
+    
     //Seters
     public void setId(Integer id) {
         this.id = id;
     }
-    public void setRut(Integer rut) {
+    public void setDv(String dv) {
+        this.dv = dv;
+    }
+        public void setRut(Integer rut) {
         this.rut = rut;
     }
     public void setFechaIngreso(String fechaIngreso) {
@@ -56,6 +62,9 @@ public class Personal {
     public Integer getRut() {
         return rut;
     }
+    public String getDv() {
+        return dv;
+    }    
     public String getFechaIngreso() {
         return fechaIngreso;
     }
