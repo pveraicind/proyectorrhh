@@ -1026,21 +1026,17 @@ public class VistaP extends javax.swing.JFrame {
                         break;
             }
            
-           
+          String fechaIngreso =""+dia1+"/"+mes1+"/"+año1+"";
+          String fechaNacimiento =""+dia2+"/"+mes2+"/"+año2+"";
           AgregarControlador insertar = new AgregarControlador();
-//          Personal  auxil = 
+          Personal  auxil = new Personal(id,rut,dv,fechaIngreso,direccion,fechaNacimiento,nombre);
             
-//            if (insert.agregarPelicula(codigo,precio,descripcion,formato4k,
-//                                   nombre,id_codigo)){
-//            
-//            JOptionPane.showMessageDialog(null,"La película se ingresó correctamente.");
-//            } else {
-//                JOptionPane.showMessageDialog(null, "Error. La película ya está existe en el registro "
-//                        + "o bien los campos están mal ingresados."
-//                    + "\nEl código debe ser entre 10.000 y 99.999."
-//                    + "\n El nombre debe ser de 3 caracteres como mínimo."
-//                    + "\n El precio tiene que ser mayor que 1.000");
-//            }
+            if (insertar.agregarPersona(auxil)){
+            
+            JOptionPane.showMessageDialog(null,"El empleado se ingresó correctamente.");
+            } else {
+                JOptionPane.showMessageDialog(null, "Error. El empleado No  fue ingresado ");
+            }
          
          
         }catch(NumberFormatException ex){
