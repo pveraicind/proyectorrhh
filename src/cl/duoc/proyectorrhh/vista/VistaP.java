@@ -1050,15 +1050,16 @@ public class VistaP extends javax.swing.JFrame {
         
         DefaultTableModel InvActual = new DefaultTableModel();
         jTable1.setModel(InvActual);
-        InvActual.addColumn("Código");
+        InvActual.addColumn("ID");
         InvActual.addColumn("Nombre");
-        InvActual.addColumn("Descripcion");
-        InvActual.addColumn("Precio");
-        InvActual.addColumn("Formato 4K");
+        InvActual.addColumn("rut");
+        InvActual.addColumn("Fecha de Ingreso");
+        InvActual.addColumn("Dirección");
+        InvActual.addColumn("Fecha de Cumpleaños");
         
-        Object[] fila = new Object[5];
-//        Listar list = new Listar();
-//        ArrayList<Pelicula>  auxil = list.listarPeliculas();
+        Object[] fila = new Object[6];
+//        Listar list=new Listar
+//        ArrayList<Personal>  auxil = list.listarPeliculas();
         
 //        for(int x =0; x < auxil.size(); ++x){
 //            fila[0] = auxil.get(x).getCodigo();
