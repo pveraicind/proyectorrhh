@@ -72,7 +72,31 @@ public class buscar {
     
     
     }
+   
+      public ResultSet buscarsolouno(Personal personal){
     
+      ResultSet resultado = null;
+        try {
+           
+           
+            int eje = 0;
+            
+            String query3 = "select * from clientegp where id="+personal.getId();
+            Connection test=Conexion.obtenerInstancia();
+            Statement dec=test.createStatement();
+            resultado=dec.executeQuery(query3);
+            
+           
+        } catch (SQLException ex) {
+            Logger.getLogger(buscar.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return resultado;
+    
+    
+    } 
+     
+     
 }   
     
     
