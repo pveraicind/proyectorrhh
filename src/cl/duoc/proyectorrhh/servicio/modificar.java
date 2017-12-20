@@ -20,11 +20,12 @@ import java.util.logging.Logger;
 public class modificar {
     
     public Boolean modificacliente(Personal persona){
-    
+      Boolean bolita;
+        bolita = false;
         try {
             ResultSet resultado = null;
-            Boolean bolita = false;
-            String query1 = "update cliente from clientesgp where id="+persona.getId();
+           
+            String query1 = "update clientesgp set rut='"+ persona.getRut()+"',dv='"+persona.getDv()+"',fechaingreso='"+persona.getFechaIngreso()+"',direccion='"+persona.getDireccion()+"',fechanacimiento='"+persona.getFechaNacimiento()+"',nombre='"+persona.getNombre()+" where id="+persona.getId();
             Connection test=Conexion.obtenerInstancia();
             Statement dec=test.createStatement();
             resultado=dec.executeQuery(query1);
@@ -32,7 +33,7 @@ public class modificar {
         } catch (SQLException ex) {
             Logger.getLogger(modificar.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return null;
+        return bolita;
     
     }
     

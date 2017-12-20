@@ -23,9 +23,9 @@ public class Conexion {
     public static Connection obtenerInstancia()
     {
         if(conexion == null){
-            String url = "jdbc:oracle:thin:@MSP-PM-04-02.aws.smartcloud.cl:1521:xe";
-            String user = "usuario02";
-            String pass = "usuario02";
+            String url = "jdbc:oracle:thin:@MSP-PM-04-07.aws.smartcloud.cl:1521:xe";
+            String user = "usuario07";
+            String pass = "usuario07";
             System.out.println("Proceso de Conexión...");
             try {
                 conexion = DriverManager.getConnection(url, user, pass);

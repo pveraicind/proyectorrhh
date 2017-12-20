@@ -26,7 +26,7 @@ public class Agregar {
                     System.out.println("Insertar registro...");
                     Statement dec;
                     dec=Conexion.obtenerInstancia().createStatement();
-                    String query1="insert into clientesgp (id, rut, dv,fechaingreso,direccion,fechanacimiento,nombre) VALUES ( '"+personal.getId()+"', '"+personal.getRut()+"','"+personal.getDv()+"','"+personal.getFechaIngreso()+"','"+personal.getDireccion()+"','"+personal.getFechaNacimiento()+"','"+personal.getNombre() +")";
+                    String query1="insert into clientesgp (id, rut, dv,fechaingreso,direccion,fechanacimiento,nombre) VALUES ( '"+personal.getId()+"', '"+personal.getRut()+"','"+personal.getDv()+"','"+personal.getFechaIngreso()+"','"+personal.getDireccion()+"','"+personal.getFechaNacimiento()+"','"+personal.getNombre() +"')";
                     dec.executeUpdate(query1);
                 } catch (SQLException ex) {
                     
