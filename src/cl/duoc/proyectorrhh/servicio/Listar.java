@@ -16,7 +16,7 @@ import java.util.ArrayList;
  */
 public class Listar {
     
-    public ArrayList<Personal> listarPersonal(){
+    public ArrayList<Personal> listarTodos(){
         ArrayList<Personal> personal =new ArrayList<>();
         try{
             buscar bus = new buscar();
@@ -36,5 +36,27 @@ public class Listar {
         return personal;
         }catch( SQLException evv){ return personal;}
         
+    }
+    
+    public Personal listarSoloUno(Personal b){
+        Personal rev =new Personal();
+        try{
+            buscar bus = new buscar();
+            if(bus.buscar1(b)){
+                ResultSet a = bus.buscarsolouno(b);
+                while (a.next()){
+                        Integer id = a.getInt("id");
+                        Integer rut = a.getInt("rut");
+                        String dv = a.getString("dv");
+                        String fechaIngreso = a.getString("fechaingreso");
+                        String direccion =a.getString("direccion");
+                        String fechaNacimiento =a.getString("fechanacimiento");
+                        String nombre =a.getString("nombre");
+
+                        rev = new Personal(id,rut,dv,fechaIngreso, direccion, fechaNacimiento, nombre);
+                                       
+                    }}
+            return rev;
+        }catch( SQLException evv){ return rev;}
     }
 }

@@ -15,12 +15,18 @@ import java.util.ArrayList;
  */
 public class ListarControlador {
     
-    public ArrayList<Personal> listarPersonalControlador(){
-        
-        
+    public ArrayList<Personal> listarTodosControlador(){
         
         Listar list =new Listar();
-        return list.listarPersonal();
+        return list.listarTodos();
         
     }
+    
+    public Personal listarSoloUnoControlador(Personal b){
+        
+        Listar list =new Listar();
+        return list.listarSoloUno(b);
+    }
+    
+    
 }

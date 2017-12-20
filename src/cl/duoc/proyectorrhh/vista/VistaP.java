@@ -9,6 +9,8 @@ package cl.duoc.proyectorrhh.vista;
 
 
 import cl.duoc.proyectorrhh.controlador.AgregarControlador;
+import cl.duoc.proyectorrhh.controlador.EliminarControlador;
+import cl.duoc.proyectorrhh.controlador.ListarControlador;
 import cl.duoc.proyectorrhh.modelo.Personal;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -74,17 +76,18 @@ public class VistaP extends javax.swing.JFrame {
         lbl7 = new javax.swing.JLabel();
         jtx5 = new javax.swing.JTextField();
         lbl9 = new javax.swing.JLabel();
-        jtx8 = new javax.swing.JTextField();
+        jtx61 = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jtx9 = new javax.swing.JTextField();
+        jtx71 = new javax.swing.JTextField();
         lbl10 = new javax.swing.JLabel();
-        jtx11 = new javax.swing.JTextField();
+        jtx8 = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         lbl11 = new javax.swing.JLabel();
         jComboBox3 = new javax.swing.JComboBox<>();
         lbl112 = new javax.swing.JLabel();
-        jtx12 = new javax.swing.JTextField();
+        jtx9 = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
         panelListar = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -96,8 +99,6 @@ public class VistaP extends javax.swing.JFrame {
         btnBuscar = new javax.swing.JButton();
         lbl12 = new javax.swing.JLabel();
         jtx6 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         panelEliminar = new javax.swing.JPanel();
@@ -236,9 +237,9 @@ public class VistaP extends javax.swing.JFrame {
         lbl9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl9.setText("Año");
 
-        jtx8.addActionListener(new java.awt.event.ActionListener() {
+        jtx61.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtx8ActionPerformed(evt);
+                jtx61ActionPerformed(evt);
             }
         });
 
@@ -246,9 +247,9 @@ public class VistaP extends javax.swing.JFrame {
 
         jLabel16.setText("/");
 
-        jtx9.addActionListener(new java.awt.event.ActionListener() {
+        jtx71.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtx9ActionPerformed(evt);
+                jtx71ActionPerformed(evt);
             }
         });
 
@@ -272,20 +273,18 @@ public class VistaP extends javax.swing.JFrame {
         lbl112.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl112.setText("Año");
 
-        jtx12.addActionListener(new java.awt.event.ActionListener() {
+        jtx9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtx12ActionPerformed(evt);
+                jtx9ActionPerformed(evt);
             }
         });
+
+        jLabel19.setText("/");
 
         javax.swing.GroupLayout panelAgregarLayout = new javax.swing.GroupLayout(panelAgregar);
         panelAgregar.setLayout(panelAgregarLayout);
         panelAgregarLayout.setHorizontalGroup(
             panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelAgregarLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lbl6)
-                .addGap(121, 493, Short.MAX_VALUE))
             .addGroup(panelAgregarLayout.createSequentialGroup()
                 .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelAgregarLayout.createSequentialGroup()
@@ -294,9 +293,6 @@ public class VistaP extends javax.swing.JFrame {
                     .addGroup(panelAgregarLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(lblTitulo1))
-                    .addGroup(panelAgregarLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelAgregarLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(lbEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -325,52 +321,61 @@ public class VistaP extends javax.swing.JFrame {
                                     .addComponent(lbl5)
                                     .addComponent(lbl4))
                                 .addGap(18, 18, 18)))
-                        .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(panelAgregarLayout.createSequentialGroup()
-                                .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jtx2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                                    .addComponent(jtx1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel11)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jtx3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jtx4)
-                            .addGroup(panelAgregarLayout.createSequentialGroup()
-                                .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(lbl7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jtx5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel15)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lbl8, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel16)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lbl9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(panelAgregarLayout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
-                                        .addComponent(jtx8, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(jtx9)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAgregarLayout.createSequentialGroup()
-                                .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(lbl10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jtx11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel18)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lbl11, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox3, 0, 80, Short.MAX_VALUE))
-                                .addGap(14, 14, 14)
-                                .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lbl112, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(panelAgregarLayout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
-                                        .addComponent(jtx12, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(panelAgregarLayout.createSequentialGroup()
+                                    .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jtx2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                                        .addComponent(jtx1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jLabel11)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jtx3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(panelAgregarLayout.createSequentialGroup()
+                                    .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lbl7, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jtx5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jLabel15)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lbl8, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jLabel16)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lbl9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(panelAgregarLayout.createSequentialGroup()
+                                            .addGap(0, 0, Short.MAX_VALUE)
+                                            .addComponent(jtx61, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jtx71)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAgregarLayout.createSequentialGroup()
+                                    .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lbl10, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jtx8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jLabel18)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lbl11, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGap(7, 7, 7)
+                                    .addComponent(jLabel19)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(lbl112, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(panelAgregarLayout.createSequentialGroup()
+                                            .addGap(0, 0, Short.MAX_VALUE)
+                                            .addComponent(jtx9, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(jtx4, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(0, 289, Short.MAX_VALUE))
+            .addGroup(panelAgregarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl6)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelAgregarLayout.setVerticalGroup(
             panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -379,11 +384,11 @@ public class VistaP extends javax.swing.JFrame {
                 .addComponent(lblTitulo2)
                 .addGap(6, 6, 6)
                 .addComponent(lblTitulo1)
-                .addGap(6, 6, 6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
                 .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(panelAgregarLayout.createSequentialGroup()
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20)
                         .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbl1)
                             .addComponent(jtx1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -406,13 +411,13 @@ public class VistaP extends javax.swing.JFrame {
                         .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jtx5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtx8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtx61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel15)
                             .addComponent(jLabel16)
                             .addComponent(lbl4))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jtx9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtx71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lbl5))
                         .addGap(39, 39, 39)
                         .addComponent(lbl6))
@@ -423,11 +428,12 @@ public class VistaP extends javax.swing.JFrame {
                             .addComponent(lbl112))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jtx11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtx8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtx12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel18))))
-                .addGap(25, 25, 25)
+                            .addComponent(jtx9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel18)
+                            .addComponent(jLabel19))))
+                .addGap(31, 31, 31)
                 .addComponent(lbEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -477,16 +483,19 @@ public class VistaP extends javax.swing.JFrame {
             }
         });
 
-        lbl12.setText("rut:");
+        lbl12.setText("ID:");
         lbl12.setToolTipText("");
 
         jtx6.setToolTipText("");
 
-        jLabel10.setText("-");
-
-        jLabel12.setText("Búsqueda por rut de empleado.");
+        jLabel12.setText("Búsqueda por ID de empleado.");
 
         jButton1.setText("Limpiar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelListarLayout = new javax.swing.GroupLayout(panelListar);
         panelListar.setLayout(panelListarLayout);
@@ -495,7 +504,7 @@ public class VistaP extends javax.swing.JFrame {
             .addGroup(panelListarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelListarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 592, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 428, Short.MAX_VALUE)
                     .addComponent(lblTitulo5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jSeparator3)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelListarLayout.createSequentialGroup()
@@ -503,17 +512,15 @@ public class VistaP extends javax.swing.JFrame {
                         .addGroup(panelListarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel12)
                             .addGroup(panelListarLayout.createSequentialGroup()
-                                .addComponent(lbl12)
-                                .addGap(18, 18, 18)
-                                .addComponent(jtx6, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(1, 1, 1)
-                                .addComponent(jLabel10)
-                                .addGap(1, 1, 1)
-                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelListarLayout.createSequentialGroup()
-                                .addComponent(btnBuscar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton1)
+                                .addGroup(panelListarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelListarLayout.createSequentialGroup()
+                                        .addComponent(lbl12)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jtx6, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelListarLayout.createSequentialGroup()
+                                        .addComponent(btnBuscar)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton1)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnMostrar)))
                         .addGap(27, 27, 27))
@@ -521,7 +528,7 @@ public class VistaP extends javax.swing.JFrame {
                         .addGroup(panelListarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblTitulo3)
                             .addComponent(lblTitulo4))
-                        .addGap(0, 464, Short.MAX_VALUE)))
+                        .addGap(0, 300, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         panelListarLayout.setVerticalGroup(
@@ -537,14 +544,12 @@ public class VistaP extends javax.swing.JFrame {
                 .addComponent(lblTitulo5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addComponent(jLabel12)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelListarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl12)
-                    .addComponent(jtx6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtx6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(panelListarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnBuscar)
@@ -555,7 +560,7 @@ public class VistaP extends javax.swing.JFrame {
 
         panelEliminar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel4.setText("Código: ");
+        jLabel4.setText("ID:");
 
         borrar1.setText("Borrar");
         borrar1.addActionListener(new java.awt.event.ActionListener() {
@@ -578,9 +583,9 @@ public class VistaP extends javax.swing.JFrame {
                         .addComponent(jLabel4)
                         .addGap(18, 18, 18)
                         .addComponent(jtx10, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45)
+                        .addGap(18, 18, 18)
                         .addComponent(borrar1)))
-                .addContainerGap(276, Short.MAX_VALUE))
+                .addContainerGap(328, Short.MAX_VALUE))
         );
         panelEliminarLayout.setVerticalGroup(
             panelEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -774,7 +779,7 @@ public class VistaP extends javax.swing.JFrame {
                             .addComponent(btnModificar)
                             .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jCheckBox4))))
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         jLayerdPanel.setLayer(panelAgregar, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -893,6 +898,7 @@ public class VistaP extends javax.swing.JFrame {
         panelListar.setVisible(true);
         panelEliminar.setVisible(false);
         panelModificar.setVisible(false);
+        jtx6.requestFocus();
         
         DefaultTableModel InvActual = new DefaultTableModel();
         jTable1.setModel(InvActual);
@@ -905,17 +911,18 @@ public class VistaP extends javax.swing.JFrame {
         
         
         Object[] fila = new Object[6];
-//        AgregarControlador insertar = new AgregarControlador();
-//        Personal  auxil = list.listarPeliculas();
+        ListarControlador insertar = new ListarControlador();
+        ArrayList<Personal>  auxil = insertar.listarTodosControlador();
         
-//        for(int x =0; x < auxil.size(); ++x){
-//            fila[0] = auxil.get(x).getCodigo();
-//            fila[1] = auxil.get(x).getNombre();
-//            fila[2] = auxil.get(x).getDescripcion();
-//            fila[3] = auxil.get(x).getPrecio();
-//            fila[4] = auxil.get(x).getFormato4k();
-//            InvActual.addRow(fila);
-//        }   
+        for(int x =0; x < auxil.size(); ++x){
+            fila[0] = auxil.get(x).getId();
+            fila[1] = auxil.get(x).getNombre();
+            fila[2] = auxil.get(x).getRut()+"-"+auxil.get(x).getDv();
+            fila[3] = auxil.get(x).getFechaIngreso();
+            fila[4] = auxil.get(x).getDireccion();
+            fila[5] = auxil.get(x).getFechaNacimiento();
+            InvActual.addRow(fila);
+        }   
 
     }//GEN-LAST:event_jMenListarActionPerformed
 
@@ -923,9 +930,16 @@ public class VistaP extends javax.swing.JFrame {
         // TODO add your handling code here:
         jtx1.setText("");
         jtx2.setText("");
+        jtx3.setText("");
         jtx4.setText("");
+        jtx5.setText("");
+        jtx61.setText("");
+        jtx71.setText("");
+        jtx8.setText("");
+        jtx9.setText("");
         jComboBox1.setSelectedIndex(0);
-        modiNombre.setText("");
+        jComboBox3.setSelectedIndex(0);
+        jtx1.requestFocus();
 
         
         
@@ -940,14 +954,12 @@ public class VistaP extends javax.swing.JFrame {
             String nombre =jtx4.getText();
             Integer dia1 = Integer.parseInt(jtx5.getText());
             String mes1="";
-            Integer año1 = Integer.parseInt(jtx8.getText());
-            String direccion =jtx9.getText();
-            Integer dia2 = Integer.parseInt(jtx11.getText());
+            Integer año1 = Integer.parseInt(jtx61.getText());
+            String direccion =jtx71.getText();
+            Integer dia2 = Integer.parseInt(jtx8.getText());
             String mes2="";
-            Integer año2 = Integer.parseInt(jtx12.getText());
+            Integer año2 = Integer.parseInt(jtx9.getText());
             
-            
-
            switch(jComboBox1.getSelectedIndex()){
                     case 0:
                         mes1 =jComboBox1.getItemAt(0);
@@ -1058,17 +1070,18 @@ public class VistaP extends javax.swing.JFrame {
         InvActual.addColumn("Fecha de Cumpleaños");
         
         Object[] fila = new Object[6];
-//        Listar list=new Listar
-//        ArrayList<Personal>  auxil = list.listarPeliculas();
+        ListarControlador insertar = new ListarControlador();
+        ArrayList<Personal>  auxil = insertar.listarTodosControlador();
         
-//        for(int x =0; x < auxil.size(); ++x){
-//            fila[0] = auxil.get(x).getCodigo();
-//            fila[1] = auxil.get(x).getNombre();
-//            fila[2] = auxil.get(x).getDescripcion();
-//            fila[3] = auxil.get(x).getPrecio();
-//            fila[4] = auxil.get(x).getFormato4k();
-//            InvActual.addRow(fila);
-//        }
+        for(int x =0; x < auxil.size(); ++x){
+            fila[0] = auxil.get(x).getId();
+            fila[1] = auxil.get(x).getNombre();
+            fila[2] = auxil.get(x).getRut()+"-"+auxil.get(x).getDv();
+            fila[3] = auxil.get(x).getFechaIngreso();
+            fila[4] = auxil.get(x).getDireccion();
+            fila[5] = auxil.get(x).getFechaNacimiento();
+            InvActual.addRow(fila);
+        }   
         
     }//GEN-LAST:event_btnMostrarActionPerformed
 
@@ -1089,14 +1102,15 @@ public class VistaP extends javax.swing.JFrame {
     private void borrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrar1ActionPerformed
         // TODO add your handling code here:
         try{
-            int codigo =Integer.parseInt(jtx10.getText());
-//            Borrar delete = new Borrar();
-        
-//            if(delete.borrarPelicula(codigo)){
-//              jLabel5.setText("La película se ha borrado correctamente.");
-//            }else{
-//                jLabel5.setText("No se pudo borrar. La película no existe.");
-//            }
+            int id =Integer.parseInt(jtx10.getText());
+            EliminarControlador delete = new EliminarControlador();
+            Personal aa = new Personal();
+            aa.setId(id);
+            if(delete.eliminarControlador(aa)){
+              jLabel5.setText("La persona se ha borrado correctamente.");
+            }else{
+                jLabel5.setText("No se pudo borrar. La persona no se ha registrado previamente.");
+            }
         }catch(NumberFormatException eev){
             jLabel5.setText("Error. Debe ingresar un valor numérico. No se permiten letras.");
         }
@@ -1105,30 +1119,34 @@ public class VistaP extends javax.swing.JFrame {
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         // TODO add your handling code here:
-        try{
+      try{
         
-        int codigo = Integer.parseInt(jtx6.getText());
+        int id = Integer.parseInt(jtx6.getText());
                 
         DefaultTableModel InvActual = new DefaultTableModel();
         jTable1.setModel(InvActual);
-        InvActual.addColumn("Código");
+        InvActual.addColumn("ID");
         InvActual.addColumn("Nombre");
-        InvActual.addColumn("Descripcion");
-        InvActual.addColumn("Precio");
-        InvActual.addColumn("Formato 4K");
+        InvActual.addColumn("rut");
+        InvActual.addColumn("Fecha de Ingreso");
+        InvActual.addColumn("Dirección");
+        InvActual.addColumn("Fecha de Cumpleaños");
         
-        Object[] fila = new Object[5];
-//        Listar list = new Listar();
-//        Pelicula auxil =list.listarPelicula(codigo);
-//        if(auxil.getCodigo()==null){
-//            JOptionPane.showMessageDialog(null, "La película no figura en nuestros registros. Digite el valor nuevamente.");
-//        }
-//        fila[0] = auxil.getCodigo();
-//        fila[1] = auxil.getNombre();
-//        fila[2] = auxil.getDescripcion();
-//        fila[3] = auxil.getPrecio();
-//        fila[4] = auxil.getFormato4k();
-//        InvActual.addRow(fila);
+        Object[] fila = new Object[6];
+        ListarControlador insertar = new ListarControlador();
+        Personal b =new Personal();
+        b.setId(id);
+        Personal  auxil = insertar.listarSoloUnoControlador(b);
+        if(auxil.getId()==null){
+            JOptionPane.showMessageDialog(null, "La Persona no figura en nuestros registros. Digite el valor nuevamente.");
+        }
+        fila[0] = auxil.getId();
+        fila[1] = auxil.getNombre();
+        fila[2] = auxil.getRut()+"-"+auxil.getDv();
+        fila[3] = auxil.getFechaIngreso();
+        fila[4] = auxil.getDireccion();
+        fila[5] = auxil.getFechaNacimiento();
+        InvActual.addRow(fila);
                  
         }catch(NumberFormatException eev){
         JOptionPane.showMessageDialog(null, "Error de campo. Debe ingresar un valor numérico  donde corresponda");
@@ -1140,7 +1158,16 @@ public class VistaP extends javax.swing.JFrame {
         panelAgregar.setVisible(false);
         jtx1.setText("");
         jtx2.setText("");
+        jtx3.setText("");
         jtx4.setText("");
+        jtx5.setText("");
+        jtx61.setText("");
+        jtx71.setText("");
+        jtx8.setText("");
+        jtx9.setText("");
+        jComboBox1.setSelectedIndex(0);
+        jComboBox3.setSelectedIndex(0);
+        jtx1.requestFocus();
 
     }//GEN-LAST:event_btnVolverActionPerformed
 
@@ -1395,21 +1422,27 @@ public class VistaP extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtx3ActionPerformed
 
-    private void jtx8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtx8ActionPerformed
+    private void jtx61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtx61ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtx8ActionPerformed
+    }//GEN-LAST:event_jtx61ActionPerformed
 
-    private void jtx9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtx9ActionPerformed
+    private void jtx71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtx71ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtx9ActionPerformed
+    }//GEN-LAST:event_jtx71ActionPerformed
 
     private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox3ActionPerformed
 
-    private void jtx12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtx12ActionPerformed
+    private void jtx9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtx9ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtx12ActionPerformed
+    }//GEN-LAST:event_jtx9ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        jtx6.setText("");
+        jtx6.requestFocus();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1478,12 +1511,12 @@ public class VistaP extends javax.swing.JFrame {
     public javax.swing.JComboBox<String> jComboBox2;
     public javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1508,17 +1541,16 @@ public class VistaP extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator5;
     public javax.swing.JTable jTable1;
     public javax.swing.JTable jTable2;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jtx1;
     private javax.swing.JTextField jtx10;
-    private javax.swing.JTextField jtx11;
-    private javax.swing.JTextField jtx12;
     public javax.swing.JTextField jtx2;
     private javax.swing.JTextField jtx3;
     private javax.swing.JTextField jtx4;
     private javax.swing.JTextField jtx5;
     public javax.swing.JTextField jtx6;
+    private javax.swing.JTextField jtx61;
     public javax.swing.JTextField jtx7;
+    private javax.swing.JTextField jtx71;
     private javax.swing.JTextField jtx8;
     private javax.swing.JTextField jtx9;
     public javax.swing.JLabel lbEstado;
